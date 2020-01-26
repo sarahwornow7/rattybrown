@@ -12,12 +12,12 @@ body, html {
   font-family: Palotino Linotype;
 }
 
-.bgimg {
+/* .bgimg {
   background-position: center;
   background-size: cover;
   background-image: url("ratty.jpg");
   min-height: 50%;
-}
+} */
 
 .menu {
   display: none;
@@ -45,7 +45,65 @@ body, html {
 </div>
 
 <!-- Header with image -->
-<header class="bgimg w3-display-container w3-greyscale-min" id="home">
+<h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="ratty.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    French Alps
+  </div>
+   <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Beautiful Mountains
+  </div>
+</div>
+
+<!-- <div class="w3-display-container mySlides">
+  <img src="img_lights.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Northern Lights
+  </div>
+   <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Beautiful Mountains
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Beautiful Mountains
+  </div>
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Beautiful Mountains
+  </div>
+</div>
+
+  <div class="w3-center w3-display-bottommiddle" style="width:100%">
+    <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); 
+}
+</script> -->
+  
+<!-- <header class="bgimg w3-display-container w3-greyscale-min" id="home">
   <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
     <span class="w3-tag">open 7AM to 2AM</span>
   </div>
@@ -55,7 +113,7 @@ body, html {
   <div class="w3-display-bottomright w3-center w3-padding-large">
     <span class="w3-tag">Brown University & the East Side</span>
   </div>
-</header>
+</header> -->
   <!-- Add a background color and large text to the whole page -->
 <div class="w3-white w3-grayscale w3-medium">
 
